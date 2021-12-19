@@ -35,3 +35,7 @@ class Car extends Vehicle {
         }
     }
 }
+
+// let myCar = new Car(5, 2, 4, 150, 18, 10000, "BMW", "C Class", 2018, "grey", 25)
+
+// console.log(maCar)
