@@ -92,14 +92,14 @@ class Car extends Vehicle {
     constructor(make, model, year, color, mileage, maximumPassengers, passengers, numberOfWheels, maximumSpeed, fuel, scheduleService) {
         super(make, model, year, color, mileage) 
         this.maximumPassengers = 6
-        this.passengers = 0
+        this.passengers = passengers
         this.numberOfWheels = 4
         this.maximumSpeed = 200
         this.fuel = 100
         this.scheduleService = false
     }
     loadPassenger(passengers) {
-        let maximumPassengers = 6;
+        this.maximumPassengers = 6;
         const seatsAvialable = []
     
            if (this.passengers < this.maximumPassengers && this.maximumPassengers - this.passengers === 1) {
@@ -131,14 +131,22 @@ class Car extends Vehicle {
            return this.scheduleService;
         }
     }
+
 }
 
 
 
-let myCar = new Car("BMW", "C Class", 2018, "grey", 25, 5, 2, 4, 150, 18, 10000, )
+let myCar = new Car("BMW", "C Class", 2018, "grey", 25, 5, 2, 4, 150, 18, 10000)
 
 console.log(myCar)
+// myCar.loadPassenger(4)
+
 //This exports things you want to use from this "module", more info in readme
+
+
 module.exports = {
     Vehicle
 }
+
+
+

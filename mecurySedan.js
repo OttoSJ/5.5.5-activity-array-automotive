@@ -16,6 +16,7 @@ class Car extends VehicleModule.Vehicle {
         this.maximumSpeed = 200
         this.fuel = 100
         this.scheduleService = false
+        this.seatsAvialable = []
     }
     loadPassenger(passengers) {
         let maximumPassengers = 6;
@@ -53,8 +54,8 @@ class Car extends VehicleModule.Vehicle {
 }
 
 
-let myCar = new Car("BMW", "C Class", 2018, "grey", 25, 5, 2, 4, 150, 18, 10000, )
-// console.log(myCar)
-
+let myCar = new Car("BMW", "C Class", 2018, "grey", 25, 5, 2, 4, 150, 18, 10000)
+console.log(myCar.start())
+console.log(myCar.loadPassenger(4))
 
 
