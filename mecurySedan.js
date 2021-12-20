@@ -21,11 +21,11 @@ class Car extends Vehicle {
         let maximumPassengers = 6;
         const seatsAvialable = []
     
-           if (passengers < maximumPassengers && maximumPassengers - passengers === 1) {
+           if (this.passengers < this.maximumPassengers && this.maximumPassengers - this.passengers === 1) {
                return console.log("There is 1 seat available!" )
                
-            } else if (maximumPassengers - passengers > 1)  { 
-                seatsAvialable.push(maximumPassengers - passengers)
+            } else if (this.maximumPassengers - this.passengers > 1)  { 
+                this.seatsAvialable.push(this.maximumPassengers - this.passengers)
                 return console.log("There are " + seatsAvialable + " available")
             } else {
                 console.log("There are no more seats available")
@@ -35,7 +35,11 @@ class Car extends Vehicle {
     }
    
     start() {
-        super.start() 
+        if (this.fuel > 0) {
+            console.log("Your vehicle has started!")
+        }else {
+            console.log("Vehicle won't start due to low fuel")
+        }
 
        
     }
